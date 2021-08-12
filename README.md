@@ -4,7 +4,8 @@ Need a list/database of ALL the possible items, cars, skins, boosts etc for Rock
 
 How To Start: 
 
-1. You'll need BakkesMod for RocketLeague PC (https://www.bakkesmod.com/) **Sorry, you can't do this on the console versions of the game** 
+1. You'll need BakkesMod for RocketLeague PC (https://www.bakkesmod.com/) 
+\*Sorry, you can't do this on the console versions of the game\* 
 2. Once installed, in-game hit F6 to bring up the command line for the Mod 
 3. Type "dumpitems" into the command line and hit "Enter"
 4. BakkesMod will generate a CSV file called "items.csv" in the same folder when the game's .EXE is located (eg. C:\Rocketleague\rocketleague\Binaries\Win64\items.csv)
