@@ -4,39 +4,36 @@ import json
 # This module is used to convert the CSV from Bakkesmod "dumpitems" command to JSON
 
 # TODO: change how dict is converted so Key in Json data is ID number and not duplicated
-
 def make_json(csv_filepath, json_filepath):
 
-    # Initialize dict
-    data = {}
+    # Initialize list for json data
+    data = []
+
+    # TODO: currently, this func needs the CSV file to have a header to work.
+    # program a way to automatically add this header into the file
+    # Will probably have to create new csv file first, then move data to it
+
+
 
     # Open CSV file and load into into csv.reader object
     with open(csv_filepath) as csvfile:
-        csvreader = csv.reader(csvfile)
+        csvreader = csv.DictReader(csvfile)
 
 
         # Iterate through rows
-        for rows in csvreader:
-            id_list = rows[0]
-            type_list = rows[1]
-            dbname_list = rows[2]
-            name_list = rows[3]
-
-            # id_list is ID number eg. "28"
-            # type_list is type eg. "Skin"
-            # dbname_list is Full name in RL database eg. "Product_TA ProductsDB.Products.Body_Torch"
-            # name_list is display name, what the item is actually called in game eg. "X-Devil"
-
-            key = rows[0]
-            data[key] = rows
+        for row in csvreader:
+            print(row)
+            data.append(row)
 
 
 
     with open(json_filepath, 'w', encoding='utf-8') as json_file:
-        json_file.write(json.dumps(data, indent=4))
+        json_string = json.dumps(data, indent=4)
+        json_file.write(json_string)
 
 
-        
 
 
-    make_json("items.csv", "rl_items.json")
+
+
+make_json("items.csv", "rl_items.json")
