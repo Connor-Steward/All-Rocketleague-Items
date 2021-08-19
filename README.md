@@ -17,9 +17,11 @@ Now, if you need to clean up this info you can use this repository (specifically
 
 
 LEGEND:
-"items.csv" - This is the file Bakkesmod generates when using the 'dumpitems' command. Up-to-date list of ALL RocketLeague items (Season 4) as of 12/08/2021
-"csv_to_json.py" - Python file to clean up the aforementioned csv file and store it neatly as JSON
-"rl_items.json" - Outputted JSON file of the 'csv_to_json.py' file 
+
+- "items.csv" - This is the file Bakkesmod generates when using the 'dumpitems' command. Up-to-date list of ALL RocketLeague items (Season 4) as of 12/08/2021
+- "csv_to_json.py" - Python file to clean up the aforementioned csv file and store it neatly as JSON
+- "rl_items.json" - Outputted JSON file of the 'csv_to_json.py' file 
+
 
 
 
